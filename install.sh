@@ -11,6 +11,6 @@ cd $REPO_DIR
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-wget -O ~/.oh-my-zsh/themes/docker.zsh-theme https://github.com/dpdornseifer/docker-zsh-theme/blob/master/docker.zsh-theme
+wget -O ~/.oh-my-zsh/themes/docker.zsh-theme https://raw.githubusercontent.com/dpdornseifer/docker-zsh-theme/master/docker.zsh-theme
 
  
