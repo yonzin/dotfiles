@@ -24,21 +24,19 @@ sudo apt-get install \
     ca-certificates \
     curl \
     software-properties-common
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-sudo apt-get update && sudo apt-get install docker-ce
-
+sudo snap install docker
 
 ## POST INSTALL DOCKER
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
-sudo systemctl enable docker
-
 ## INSTALL DOCKER-COMPOSE
-sudo curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+## GIT ALIAS
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.unstage 'reset HEAD --'
